@@ -1,10 +1,11 @@
 import { IncomeList } from '@/components/finance/IncomeList';
+import { BackButton } from '@/components/shared/BackButton';
 
-/**
- * IncomePage - Income entries management.
- * Renders IncomeList which handles month navigation, CRUD, and form display.
- * Requirements: 5.2, 5.3, 5.4, 5.5
- */
 export default function IncomePage() {
-  return <IncomeList />;
+  return (
+    <div>
+      <BackButton to="/finance" label="Finance" />
+      <IncomeList />
+    </div>
+  );
 }

@@ -1,9 +1,11 @@
 import { WeeklyStats } from '@/components/finance/WeeklyStats';
+import { BackButton } from '@/components/shared/BackButton';
 
-/**
- * WeeklyStatsPage - Weekly spending breakdown.
- * Requirements: 9.1, 9.2, 9.3, 9.4, 9.5
- */
 export default function WeeklyStatsPage() {
-  return <WeeklyStats />;
+  return (
+    <div>
+      <BackButton to="/finance" label="Finance" />
+      <WeeklyStats />
+    </div>
+  );
 }
