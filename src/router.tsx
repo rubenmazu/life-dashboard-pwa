@@ -5,6 +5,7 @@ import { ErrorBoundary } from '@/components/shared/ErrorBoundary';
 
 // Page components (lazy-loaded in production, direct imports for now)
 import ProfilesPage from '@/pages/ProfilesPage';
+import ProfileCreatePage from '@/pages/ProfileCreatePage';
 import ProfileAuthPage from '@/pages/ProfileAuthPage';
 import FinanceDashboardPage from '@/pages/FinanceDashboardPage';
 import IncomePage from '@/pages/IncomePage';
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
       {
         path: 'profiles',
         element: <ProfilesPage />,
+      },
+      {
+        path: 'profiles/create',
+        element: <ProfileCreatePage />,
       },
       {
         path: 'profiles/auth/:id',
