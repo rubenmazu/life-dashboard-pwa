@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import BottomTabBar from './BottomTabBar';
+import { ProfileProvider } from '@/context/ProfileContext';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration';
 
 /**
@@ -20,6 +21,14 @@ function shouldShowTabBar(pathname: string): boolean {
 }
 
 export default function AppLayout() {
+  return (
+    <ProfileProvider>
+      <AppLayoutInner />
+    </ProfileProvider>
+  );
+}
+
+function AppLayoutInner() {
   const location = useLocation();
   const showTabBar = shouldShowTabBar(location.pathname);
 
